@@ -16,7 +16,7 @@ phases:
       - echo Build completed
 artifacts:
   files:
-     - webapp/target/webapp.war
+     - webapp/target/webapp*.war
      - scripts/server_start.sh
      - scripts/server_stop.sh
      - appspec.yml
