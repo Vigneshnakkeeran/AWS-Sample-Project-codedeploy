@@ -4,6 +4,10 @@ phases:
   install:
     runtime-versions:
       java: corretto11
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install maven -y 
   build:
     commands:
       - mvn clean package
@@ -12,9 +16,9 @@ phases:
       - echo Build completed
 artifacts:
   files:
-    - webapp/target/webapp.war
-    - scripts/server_start.sh
-    - scripts/server_stop.sh
-    - appspec.yml
+     - webapp/target/webapp.war
+     - scripts/server_start.sh
+     - scripts/server_stop.sh
+     - appspec.yml
    
   discard-paths: yes
