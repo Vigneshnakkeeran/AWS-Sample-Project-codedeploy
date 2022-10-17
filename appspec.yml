@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 
 files:
-  - source: /webapp.war
-    destination: /opt/tomcat/webapps/
+  - source: webapp/target/webapp*.war
+    destination: /root/opt/apache-tomcat-9.0.68/webapps
     
 file_exists_behavior: OVERWRITE    
           
